@@ -19,6 +19,8 @@ def extract_keywords(text):
     """
     # 请在下方编写代码
     # 使用split()方法分割字符串，返回关键词列表
+    key=text.split()
+    return key
     pass
 
 def parse_csv_line(csv_line):
@@ -33,6 +35,8 @@ def parse_csv_line(csv_line):
     """
     # 请在下方编写代码
     # 使用split()方法分割CSV行，返回字段列表
+    fields=csv_line.split(',')
+    return fields
     pass
 
 def extract_name_and_domain(email):
@@ -47,4 +51,13 @@ def extract_name_and_domain(email):
     """
     # 请在下方编写代码
     # 使用split()方法分割电子邮件地址，返回用户名和域名的元组
+    parts=email.split('@')
+    if len(parts) == 2:
+        username = parts[0]
+        domain = parts[1]
+        return (username, domain)
+    else:
+        # 处理无效邮件格式的情况（可选）
+        print(f"警告: 无效的邮件格式 '{email}'")
+        return (None, None)
     pass 
