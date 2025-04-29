@@ -10,7 +10,8 @@
 def print_hello_world():
     """
     输出"Hello, World!"
-    
+    print("Hello,world")
     用于学习print函数的基本使用
     """
+    print("Hello, World!")
     pass
